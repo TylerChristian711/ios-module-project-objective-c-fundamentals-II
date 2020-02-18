@@ -20,6 +20,7 @@
 @property (nonatomic) int hoursWorked;
 @property (nonatomic) TACTimedTaskController *timedTaskController;
 @property (nonatomic) BOOL isUpdating;
+@property (nonatomic) TACTimedTask *task;
 
 // -------- --------- --------
  //MARK: OUTLETS
@@ -43,7 +44,7 @@
     self.isUpdating = NO;
 }
 - (IBAction)logTime:(UIButton *)sender {
-    if (self.isUpdating) {
+    if (!self.isUpdating) {
         self.client = self.clientTextField.text;
         self.summary = self.summaryTextField.text;
         self.hourlyRate = [self.hourlyRateTextField.text doubleValue];
@@ -57,7 +58,20 @@
         [self.tableView reloadData];
         [self clearTextFields];
     } else {
+        self.client = self.clientTextField.text;
+        self.summary = self.summaryTextField.text;
+        self.hourlyRate = [self.hourlyRateTextField.text doubleValue];
+        self.hoursWorked = [self.timeWorkedTextField.text intValue];
         
+        [self.timedTaskController updateTask:self.task
+                                  withClient:self.client
+                                     summary:self.summary
+                                  hourlyRate:self.hourlyRate
+                                 hoursWorked:self.hoursWorked];
+        
+        [self.tableView reloadData];
+        [self clearTextFields];
+        self.isUpdating = NO;
     }
 }
 
@@ -76,6 +90,8 @@
     self.timeWorkedTextField.text = [NSString stringWithFormat:@"%d",self.hoursWorked];
 }
 
+
+
 //MARK: TABELVIEW DATASOURCE
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -93,6 +109,7 @@
 // MARK: TABLEVIEW DELEGATE
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     TACTimedTask *task = [self.timedTaskController.TimedTask objectAtIndex:indexPath.row];
+    self.task = task;
     self.client = task.client;
     self.summary = task.summary;
     self.hourlyRate = task.hourlyRate;
