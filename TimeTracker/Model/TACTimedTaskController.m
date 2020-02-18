@@ -22,14 +22,26 @@
 - (void) createTimedTaskWithClient:(NSString *)client
                            summary:(NSString *)summary
                         hourlyRate:(double)hourlyRate
-                        hoursWorked:(int)hoursWorked {
+                       hoursWorked:(int)hoursWorked {
     
-TACTimedTask *task = [[TACTimedTask alloc] initWithClient:client
-                                                  summary:summary
-                                               hourlyRate:hourlyRate
-                                              hoursWorked:hoursWorked];
+    TACTimedTask *task = [[TACTimedTask alloc] initWithClient:client
+                                                      summary:summary
+                                                   hourlyRate:hourlyRate
+                                                  hoursWorked:hoursWorked];
     
     [self.TimedTask addObject:task];
+    
+}
+
+- (void) updateTask:(TACTimedTask *)task
+         withClient:(NSString *)client
+            summary:(NSString *)summary
+         hourlyRate:(double)hourlyRate
+        hoursWorked:(int)hoursWorked {
+    task.client = client;
+    task.summary = summary;
+    task.hourlyRate = hourlyRate;
+    task.hoursWorked = hoursWorked;
     
 }
 

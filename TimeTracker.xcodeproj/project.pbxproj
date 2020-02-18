@@ -15,6 +15,7 @@
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		E3767B8823FC8179009E4E08 /* TACTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E3767B8723FC8179009E4E08 /* TACTimedTask.m */; };
 		E3767B8B23FC8982009E4E08 /* TACTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3767B8A23FC8982009E4E08 /* TACTimedTaskController.m */; };
+		E3767B8E23FC8C87009E4E08 /* TACTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3767B8D23FC8C87009E4E08 /* TACTimeTrackerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		E3767B8723FC8179009E4E08 /* TACTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TACTimedTask.m; sourceTree = "<group>"; };
 		E3767B8923FC8982009E4E08 /* TACTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TACTimedTaskController.h; path = TimeTracker/Model/TACTimedTaskController.h; sourceTree = SOURCE_ROOT; };
 		E3767B8A23FC8982009E4E08 /* TACTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TACTimedTaskController.m; path = TimeTracker/Model/TACTimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		E3767B8C23FC8C87009E4E08 /* TACTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TACTimeTrackerViewController.h; path = TimeTracker/Model/TACTimeTrackerViewController.h; sourceTree = SOURCE_ROOT; };
+		E3767B8D23FC8C87009E4E08 /* TACTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TACTimeTrackerViewController.m; path = TimeTracker/Model/TACTimeTrackerViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E3767B8C23FC8C87009E4E08 /* TACTimeTrackerViewController.h */,
+				E3767B8D23FC8C87009E4E08 /* TACTimeTrackerViewController.m */,
 			);
 			name = "View Controller";
 			path = "../Model/View Controller";
@@ -207,6 +212,7 @@
 				E3767B8B23FC8982009E4E08 /* TACTimedTaskController.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 				E3767B8823FC8179009E4E08 /* TACTimedTask.m in Sources */,
+				E3767B8E23FC8C87009E4E08 /* TACTimeTrackerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
