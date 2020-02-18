@@ -14,6 +14,7 @@
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		E3767B8823FC8179009E4E08 /* TACTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E3767B8723FC8179009E4E08 /* TACTimedTask.m */; };
+		E3767B8B23FC8982009E4E08 /* TACTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3767B8A23FC8982009E4E08 /* TACTimedTaskController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E3767B8623FC8179009E4E08 /* TACTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TACTimedTask.h; sourceTree = "<group>"; };
 		E3767B8723FC8179009E4E08 /* TACTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TACTimedTask.m; sourceTree = "<group>"; };
+		E3767B8923FC8982009E4E08 /* TACTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TACTimedTaskController.h; path = TimeTracker/Model/TACTimedTaskController.h; sourceTree = SOURCE_ROOT; };
+		E3767B8A23FC8982009E4E08 /* TACTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TACTimedTaskController.m; path = TimeTracker/Model/TACTimedTaskController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 		467FC85D23F3784C00C15592 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E3767B8923FC8982009E4E08 /* TACTimedTaskController.h */,
+				E3767B8A23FC8982009E4E08 /* TACTimedTaskController.m */,
 			);
 			name = "Model Controller";
 			path = "../Model Controller";
@@ -199,6 +204,7 @@
 			files = (
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
+				E3767B8B23FC8982009E4E08 /* TACTimedTaskController.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 				E3767B8823FC8179009E4E08 /* TACTimedTask.m in Sources */,
 			);
